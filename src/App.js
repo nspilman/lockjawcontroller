@@ -68,20 +68,22 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-      <div className = "text-center my-5">
-        <h1 className = "text-light">LOCKJAW Audio Controller</h1>
-        <h5 className ="text-light desktop">Use the Keyboard</h5>
-      </div>
-      <br/>
-      <div className = "flexBox">
-      <div className = "controller">
-      {this.state.buttons.map(button =>{
-       const  {trigger, audio, display} = button
-        return(<Trigger trigger = {trigger} key={trigger} display = {display} audio = {audio}/>)
-      })}
-      </div>
-      </div>
+      <div className="App text-center">
+        <div className = "text-center my-5">
+          <h1 className = "text-light">LOCKJAW Audio Controller</h1>
+          <h5 className ="text-light desktop">Use the Keyboard</h5>
+        </div>
+        <br/>
+        <div className = "flexBox">
+          <div className = "controller">
+            {this.state.buttons.map(button =>{
+            const  {trigger, audio, display} = button
+            return(<Trigger trigger = {trigger} key={trigger} display = {display} audio = {audio}/>)
+            })}
+          </div>
+        </div>
+       <b> <a href = "https://open.spotify.com/album/60v1J0KDO9i8Ufypg1VEbL" target = "_blank" className = "text-white py-5"><i className="fa fa-spotify" style={{color:'green',fontSize:'18px'}}></i> Listen to Lockjaw on Spotify </a>
+       </b>
       </div>
     );
   }
