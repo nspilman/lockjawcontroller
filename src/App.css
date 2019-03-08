@@ -1,0 +1,51 @@
+.App {
+  align-items: center;
+  height:100vh;
+padding-top:3em;
+  
+}
+
+body{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url("./img/lockjaw.png");
+}
+
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.triggerBox{
+  width:100px;
+  height:100px;
+  margin:10px;
+  background-color: #FFE2B5;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border:black 1px solid;
+  min-width: 100px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.flexBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controller{
+  display: flex;
+  width: 400px;
+  flex-wrap:wrap;
+}
+
+.boxActive{
+  width:105px;
+  height:105px;
+  margin:5px;
+  background-color:orange;
+}
