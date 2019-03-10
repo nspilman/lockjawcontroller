@@ -8,7 +8,6 @@ class Trigger extends Component{
         this.state = { 
           active:false,
           class:"triggerBox",
-          audioLoad:new Audio(this.props.audio)
         };
         this.playSound = this.playSound.bind(this)
       }
@@ -16,8 +15,12 @@ class Trigger extends Component{
       playSound(){
         this.setState({class:"triggerBox boxActive"})
             const thisObj = this
-                const audio = new Audio(this.props.audio)
-                audio.play()
+                const audio = thisObj.props.audio
+                if (audio.paused){
+                    audio.play()
+                }else{
+                    audio.currentTime = 0;
+                    }
                 setTimeout(function(){thisObj.setState({class:"triggerBox"})},200)
             
     }

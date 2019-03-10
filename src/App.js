@@ -78,7 +78,7 @@ class App extends Component {
           <div className = "controller">
             {this.state.buttons.map(button =>{
             const  {trigger, audio, display} = button
-            return(<Trigger trigger = {trigger} key={trigger} display = {display} audio = {audio}/>)
+            return(<Trigger trigger = {trigger} key={trigger} display = {display} audio = {new Audio(audio)}/>)
             })}
           </div>
         </div>
